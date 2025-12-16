@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estadística Poblacional de Bolivia</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     :root {
-      --primary: #1e3799;
+      --primary: #4c2882;
       --secondary: #4a69bd;
       --accent: #f6b93b;
       --background: #f5f6fa;
@@ -19,7 +25,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -102,7 +108,8 @@
       border-radius: 14px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeUp 0.8s ease both;
     }
 
     .card:hover {
@@ -132,6 +139,18 @@
       color: var(--white);
       text-align: center;
       padding: 2rem;
+      animation: fadeUp 1s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -165,21 +184,21 @@
       <div class="card">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Población" />
         <div>
-          <h3>Población Total</h3>
+          <h3><i class="fa-solid fa-users" style="color:var(--secondary)"></i> Población Total</h3>
           <p>Número total de habitantes y su evolución en el tiempo.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4" alt="Edad" />
         <div>
-          <h3>Estructura por Edad</h3>
+          <h3><i class="fa-solid fa-chart-pie" style="color:var(--secondary)"></i> Estructura por Edad</h3>
           <p>Distribución de la población por grupos etarios.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="Migración" />
         <div>
-          <h3>Migración</h3>
+          <h3><i class="fa-solid fa-arrow-right-arrow-left" style="color:var(--secondary)"></i> Migración</h3>
           <p>Movimientos poblacionales internos y externos.</p>
         </div>
       </div>
@@ -199,14 +218,14 @@
       <div class="card">
         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Planificación" />
         <div>
-          <h3>Planificación</h3>
+          <h3><i class="fa-solid fa-city" style="color:var(--secondary)"></i> Planificación</h3>
           <p>Permite diseñar políticas públicas eficientes.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Desarrollo" />
         <div>
-          <h3>Desarrollo</h3>
+          <h3><i class="fa-solid fa-leaf" style="color:var(--secondary)"></i> Desarrollo</h3>
           <p>Contribuye al crecimiento sostenible del país.</p>
         </div>
       </div>
@@ -219,5 +238,3 @@
 
 </body>
 </html>
-
-
