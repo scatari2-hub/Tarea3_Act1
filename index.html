@@ -3,62 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estadística Poblacional de Bolivia</title>
+  <title>Herramientas de Estadística Poblacional en Bolivia</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0f3d57;
-      --secondary: #1f7a8c;
-      --accent: #e36414;
-      --light: #f5f7fa;
-      --dark: #1c1c1c;
+      --primary: #4a148c;      /* Morado institucional */
+      --secondary: #7b1fa2;    /* Morado claro */
+      --accent: #f3e5f5;       /* Fondo lila suave */
+      --highlight: #ffb300;    /* Dorado */
+      --text-dark: #1c1c1c;
+      --text-light: #ffffff;
+      --bg-light: #faf7fb;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 3rem 2rem;
+      color: var(--text-light);
+      padding: 4rem 2rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
     }
 
     nav {
       background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
     nav ul {
       display: flex;
       justify-content: center;
-      gap: 2rem;
       list-style: none;
+      padding: 1rem;
+      gap: 2rem;
     }
 
     nav a {
@@ -68,189 +61,115 @@
     }
 
     nav a:hover {
-      color: var(--accent);
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
+      color: var(--secondary);
     }
 
     section {
-      margin-bottom: 4rem;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    section h2 {
-      font-size: 2rem;
+    h2 {
       color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    section p {
-      max-width: 800px;
       margin-bottom: 1.5rem;
+      font-size: 2.2rem;
     }
 
-    .cards {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
     }
 
     .card {
       background-color: #ffffff;
       border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
+      padding: 2.2rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .card h3 {
       color: var(--secondary);
-      margin-bottom: 0.5rem;
-    }
-
-    .highlight {
-      background-color: var(--secondary);
-      color: #fff;
-      padding: 3rem 2rem;
-      border-radius: 20px;
-    }
-
-    .highlight h2 {
-      color: #fff;
-    }
-
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .stat {
-      flex: 1 1 200px;
-      background-color: rgba(255,255,255,0.15);
-      padding: 1.5rem;
-      border-radius: 14px;
-      text-align: center;
-    }
-
-    .stat span {
-      font-size: 2.2rem;
-      font-weight: 700;
-      display: block;
+      margin-bottom: 1rem;
     }
 
     footer {
       background-color: var(--primary);
-      color: #ffffff;
+      color: var(--text-light);
       text-align: center;
-      padding: 2rem;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+      padding: 2.5rem 2rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Estadística Poblacional de Bolivia</h1>
-    <p>Análisis demográfico, social y territorial de la población boliviana</p>
+    <h1>Herramientas de Estadística Poblacional</h1>
+    <p>Instrumentos utilizados para el análisis demográfico en Bolivia</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#overview">Panorama</a></li>
-      <li><a href="#demografia">Demografía</a></li>
-      <li><a href="#regiones">Regiones</a></li>
-      <li><a href="#indicadores">Indicadores</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#institucionales">Institucionales</a></li>
+      <li><a href="#tecnologicas">Tecnológicas</a></li>
+      <li><a href="#metodologicas">Metodológicas</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section id="overview">
-      <h2>Panorama General</h2>
-      <p>
-        Bolivia presenta una diversidad poblacional marcada por diferencias regionales, culturales y socioeconómicas. El análisis estadístico permite comprender la evolución de la población, su distribución y los principales retos demográficos del país.
-      </p>
-    </section>
-
-    <section id="demografia">
-      <h2>Características Demográficas</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Crecimiento Poblacional</h3>
-          <p>La tasa de crecimiento ha mostrado una desaceleración progresiva en las últimas décadas, asociada a cambios en fecundidad y migración.</p>
-        </div>
-        <div class="card">
-          <h3>Estructura por Edad</h3>
-          <p>Predomina una población joven-adulta, aunque el envejecimiento poblacional comienza a ser un factor relevante.</p>
-        </div>
-        <div class="card">
-          <h3>Urbanización</h3>
-          <p>Más del 70% de la población reside en áreas urbanas, concentrándose principalmente en el eje central del país.</p>
-        </div>
+  <section id="institucionales">
+    <h2>Herramientas Institucionales</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Instituto Nacional de Estadística (INE)</h3>
+        <p>Principal entidad oficial encargada de censos, encuestas y producción de datos estadísticos en Bolivia.</p>
       </div>
-    </section>
-
-    <section id="regiones" class="highlight">
-      <h2>Distribución Regional</h2>
-      <p>
-        La población boliviana se distribuye de manera desigual entre los departamentos, con altas concentraciones en La Paz, Santa Cruz y Cochabamba.
-      </p>
-      <div class="stats">
-        <div class="stat">
-          <span>30%</span>
-          Santa Cruz
-        </div>
-        <div class="stat">
-          <span>28%</span>
-          La Paz
-        </div>
-        <div class="stat">
-          <span>18%</span>
-          Cochabamba
-        </div>
+      <div class="card">
+        <h3>Censos Nacionales</h3>
+        <p>Recolección integral de información sobre población, vivienda y características socioeconómicas.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="indicadores">
-      <h2>Indicadores Clave</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Esperanza de Vida</h3>
-          <p>Aproximadamente 72 años, con variaciones según región y acceso a servicios de salud.</p>
-        </div>
-        <div class="card">
-          <h3>Tasa de Fecundidad</h3>
-          <p>En descenso, reflejando cambios en patrones familiares y mayor acceso a educación.</p>
-        </div>
-        <div class="card">
-          <h3>Densidad Poblacional</h3>
-          <p>Relativamente baja a nivel nacional, con fuertes contrastes entre áreas urbanas y rurales.</p>
-        </div>
+  <section id="tecnologicas">
+    <h2>Herramientas Tecnológicas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Software Estadístico</h3>
+        <p>Uso de programas como R, SPSS y Python para análisis y visualización de datos poblacionales.</p>
       </div>
-    </section>
-  </main>
+      <div class="card">
+        <h3>Sistemas de Información Geográfica (SIG)</h3>
+        <p>Análisis espacial de la población para planificación territorial y toma de decisiones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologicas">
+    <h2>Herramientas Metodológicas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Encuestas Demográficas</h3>
+        <p>Instrumentos para recopilar información sobre fecundidad, mortalidad, migración y condiciones de vida.</p>
+      </div>
+      <div class="card">
+        <h3>Indicadores Estadísticos</h3>
+        <p>Tasas, razones e índices que permiten interpretar y comparar fenómenos poblacionales.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Estadística Poblacional de Bolivia · Diseño informativo y visual moderno</p>
+    <p>&copy; 2025 Estadística Poblacional en Bolivia · Página de Herramientas</p>
   </footer>
 
 </body>
 </html>
+
